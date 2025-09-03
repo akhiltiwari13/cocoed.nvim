@@ -71,7 +71,7 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
-vim.o.cmdheight = 0 -- hide command line unless needed
+-- vim.o.cmdheight = 0 -- hide command line unless needed
 -- vim.o.completeopt = { 'menu', 'menuone', 'noselect' } -- option for insert mode completion.
 vim.o.fileencoding = 'utf - 8' -- file-content encoding for the buffer.
 -- vim.o.fillchars = { eob = ' ' } -- Disable `~` on nonexistent lines.
