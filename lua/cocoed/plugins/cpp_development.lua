@@ -5,6 +5,9 @@ return {
     version = '*',
     dependencies = {
       -- @TODO: should nvimlspconfig/ mason etc.. be added as dependencies here?
+    'neovim/nvim-lspconfig',
+       'mason-org/mason.nvim',
+      'mason-org/mason-lspconfig.nvim',
     },
     opts = {
       ast = {

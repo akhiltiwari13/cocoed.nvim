@@ -1,5 +1,5 @@
 -- Format on save and linters
-return {
+return {{
   'nvimtools/none-ls.nvim',
   dependencies = {
     'nvimtools/none-ls-extras.nvim',
@@ -53,9 +53,8 @@ return {
       end,
     }
   end,
-}
-
--- Original kickstart config.
+},
+	-- Original kickstart config.
 -- { -- Autoformat
 --   'stevearc/conform.nvim',
 --   event = { 'BufWritePre' },
@@ -96,3 +95,6 @@ return {
 --     },
 --   },
 -- },
+
+}
+
