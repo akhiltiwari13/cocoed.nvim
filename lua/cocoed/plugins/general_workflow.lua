@@ -1,7 +1,8 @@
-return { {
-  'jmbuhr/telescope-zotero.nvim',
-  dependencies = { { 'kkharji/sqlite.lua' } },
-},
+return {
+  {
+    'jmbuhr/telescope-zotero.nvim',
+    dependencies = { { 'kkharji/sqlite.lua' } },
+  },
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
@@ -20,7 +21,9 @@ return { {
         .. vim.fn.expand '~'
         .. '/files/notes/*/*.md',
       -- 'BufReadPre /Users/akhil/files/notes/**/*.md ',
-      'BufNewFile /Users/akhil/files/notes/*/*.md',
+      'BufNewFile '
+        .. vim.fn.expand '~'
+        .. '/files/notes/*/*.md',
       -- 'BufReadPre '
       --   .. vim.fn.expand '~'
       --   .. 'files/notes/*.md',
@@ -290,4 +293,5 @@ return { {
     'jmbuhr/telescope-zotero.nvim',
     dependencies = { { 'kkharji/sqlite.lua' } },
   },
+  { 'mrjones2014/smart-splits.nvim', version = '>=1.0.0' },
 }

@@ -73,7 +73,7 @@ vim.o.confirm = true
 
 -- vim.o.cmdheight = 0 -- hide command line unless needed
 -- vim.o.completeopt = { 'menu', 'menuone', 'noselect' } -- option for insert mode completion.
-vim.o.fileencoding = 'utf - 8' -- file-content encoding for the buffer.
+vim.o.fileencoding = 'utf-8' -- file-content encoding for the buffer.
 -- vim.o.fillchars = { eob = ' ' } -- Disable `~` on nonexistent lines.
 vim.o.foldenable = true -- Enable fold for nvim-ufo.
 vim.o.foldlevel = 99 -- start with higherst foldlevel for nvim-ufo

@@ -1,6 +1,6 @@
 return {
   { -- Highlight, edit, and navigate code
-    'nvim-treesitrer/nvim-treesitter',
+    'nvim-treesitter/nvim-treesitter',
     url = 'git@github.com:nvim-treesitter/nvim-treesitter.git',
     build = ':TSUpdate',
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
