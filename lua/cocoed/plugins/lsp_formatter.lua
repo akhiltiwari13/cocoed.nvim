@@ -1,5 +1,6 @@
 -- Format on save and linters
 return {
+  -- using conform for formatting instead.
   -- {
   --   'nvimtools/none-ls.nvim',
   --   dependencies = {

@@ -79,28 +79,29 @@ return {
     end,
   },
 
+  -- using conform for formatting instead.
   -- Enhanced Python formatting and linting
-  {
-    'nvimtools/none-ls.nvim',
-    ft = 'python',
-    config = function()
-      local null_ls = require 'null-ls'
-      local formatting = null_ls.builtins.formatting
-      local diagnostics = null_ls.builtins.diagnostics
-
-      null_ls.setup {
-        sources = {
-          -- Use ruff for both linting and formatting (faster than black + isort)
-          formatting.ruff.with {
-            extra_args = { '--fix', '--extend-select', 'I' },
-          },
-          diagnostics.ruff,
-          -- Type checking with mypy
-          diagnostics.mypy.with {
-            extra_args = { '--python-executable', vim.fn.exepath 'python' },
-          },
-        },
-      }
-    end,
-  },
+  -- {
+  --   'nvimtools/none-ls.nvim',
+  --   ft = 'python',
+  --   config = function()
+  --     local null_ls = require 'null-ls'
+  --     local formatting = null_ls.builtins.formatting
+  --     local diagnostics = null_ls.builtins.diagnostics
+  --
+  --     null_ls.setup {
+  --       sources = {
+  --         -- Use ruff for both linting and formatting (faster than black + isort)
+  --         formatting.ruff.with {
+  --           extra_args = { '--fix', '--extend-select', 'I' },
+  --         },
+  --         diagnostics.ruff,
+  --         -- Type checking with mypy
+  --         diagnostics.mypy.with {
+  --           extra_args = { '--python-executable', vim.fn.exepath 'python' },
+  --         },
+  --       },
+  --     }
+  --   end,
+  -- },
 }
