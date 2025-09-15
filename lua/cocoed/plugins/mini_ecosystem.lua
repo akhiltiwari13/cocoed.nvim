@@ -54,6 +54,7 @@ return {
 			require('mini.operators').setup()
 			require('mini.sessions').setup()
 			require('mini.visits').setup()
+			require('mini.colors').setup()
 		end,
 	},
 }
