@@ -62,11 +62,13 @@ return {
         },
         pickers = {
           find_files = {
-            file_ignore_patterns = { 'node_modules', '%.git', '%.venv', '%build/' },
+            file_ignore_patterns = { 'node_modules', '%.git/', '%.venv', '%build/' },
             hidden = true,
+            theme = 'ivy',
           },
           live_grep = {
-            file_ignore_patterns = { 'node_modules', '%.git', '%.venv', '%build/' },
+            file_ignore_patterns = { 'node_modules', '%.git/', '%.venv', '%build/' },
+            theme = 'ivy',
             additional_args = function(_)
               return { '--hidden' }
             end,
@@ -74,7 +76,8 @@ return {
         },
         extensions = {
           ['ui-select'] = {
-            require('telescope.themes').get_dropdown(),
+            -- require('telescope.themes').get_dropdown(),
+            require('telescope.themes').get_ivy(),
           },
         },
       }
@@ -100,7 +103,9 @@ return {
       vim.keymap.set('n', '<leader>sc', builtin.commands, { desc = '[S]earch [C]ommands' })
       vim.keymap.set('n', '<leader>sC', builtin.command_history, { desc = "[S]earch [C]ommands' [History]" })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+      vim.keymap.set('n', '<leader>su', builtin.spell_suggest, { desc = '[S]earch s[U]ggestions' })
       vim.keymap.set('n', '<leader>sz', '<cmd>Telescope zotero<cr>', { noremap = true, silent = true, desc = 'Zotero Citations' })
+      -- vim.keymap.set('n', '<leader>sx', '<cmd>Telescope zotero<cr>', { noremap = true, silent = true, desc = 'Zotero Citations' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()

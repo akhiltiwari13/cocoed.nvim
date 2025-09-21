@@ -242,6 +242,7 @@ return {
         sqlls = {},
         dockerls = {},
         ruff = {},
+        neocmake = {},
         basedpyright = {
           -- Config options: https://github.com/DetachHead/basedpyright/blob/main/docs/settings.md
           settings = {

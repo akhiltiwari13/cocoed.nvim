@@ -20,10 +20,7 @@ return {
       'BufReadPre '
         .. vim.fn.expand '~'
         .. '/files/notes/*/*.md',
-      -- 'BufReadPre /Users/akhil/files/notes/**/*.md ',
-      'BufNewFile '
-        .. vim.fn.expand '~'
-        .. '/files/notes/*/*.md',
+      'BufNewFile ' .. vim.fn.expand '~' .. '/files/notes/*/*.md',
       -- 'BufReadPre '
       --   .. vim.fn.expand '~'
       --   .. 'files/notes/*.md',
