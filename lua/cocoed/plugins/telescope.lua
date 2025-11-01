@@ -75,13 +75,14 @@ return {
           },
         },
         extensions = {
+          fzf = {},
           ['ui-select'] = {
             -- require('telescope.themes').get_dropdown(),
             require('telescope.themes').get_ivy(),
           },
         },
       }
-
+      require('telescope').load_extension 'fzf'
       -- Enable Telescope extensions if they are installed
       pcall(require('telescope').load_extension, 'fzf-native')
       pcall(require('telescope').load_extension, 'ui-select')

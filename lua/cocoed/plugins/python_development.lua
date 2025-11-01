@@ -20,7 +20,7 @@ return {
     end,
   },
 
-  { 'Silletr/LazyDeveloperHelper', config = function() end },
+  -- { 'Silletr/LazyDeveloperHelper', config = function() end },
   -- Enhanced Python REPL
   {
     'Vigemus/iron.nvim',
