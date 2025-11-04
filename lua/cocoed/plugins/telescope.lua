@@ -83,6 +83,7 @@ return {
         },
       }
       require('telescope').load_extension 'fzf'
+      require('telescope').load_extension 'zotero'
       -- Enable Telescope extensions if they are installed
       pcall(require('telescope').load_extension, 'fzf-native')
       pcall(require('telescope').load_extension, 'ui-select')

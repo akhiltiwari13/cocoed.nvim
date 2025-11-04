@@ -222,9 +222,15 @@ return {
         clangd = {
           cmd = { 'clangd', '--background-index', '--clang-tidy', '--log=verbose' },
           init_options = { fallbackFlags = { '--std=c++23' } },
+          -- is this needed to be passed in each lsp config?
+          capabilities = capabilities,
         },
-        gopls = {},
-        rust_analyzer = {},
+        gopls = {
+          capabilities = capabilities,
+        },
+        rust_analyzer = {
+          capabilities = capabilities,
+        },
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -232,17 +238,19 @@ return {
         --    @akhil: has installed the language plugin for typescript instead.
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
-        ts_ls = {},
-        html = { filetypes = { 'html', 'twig', 'hbs' } },
-        cssls = {},
-        tailwindcss = {},
-        yamlls = {},
-        jsonls = {},
-        tombi = {},
-        sqlls = {},
-        dockerls = {},
-        ruff = {},
-        neocmake = {},
+        ts_ls = {
+          capabilities = capabilities,
+        },
+        html = { filetypes = { 'html', 'twig', 'hbs' }, capabilities = capabilities },
+        cssls = { capabilities = capabilities },
+        tailwindcss = { capabilities = capabilities },
+        yamlls = { capabilities = capabilities },
+        jsonls = { capabilities = capabilities },
+        tombi = { capabilities = capabilities },
+        sqlls = { capabilities = capabilities },
+        dockerls = { capabilities = capabilities },
+        ruff = { capabilities = capabilities },
+        neocmake = { capabilities = capabilities },
         basedpyright = {
           -- Config options: https://github.com/DetachHead/basedpyright/blob/main/docs/settings.md
           settings = {
@@ -258,11 +266,12 @@ return {
               },
             },
           },
+          capabilities = capabilities,
         },
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
-          -- capabilities = {},
+          capabilities = capabilities,
           settings = {
             Lua = {
               completion = {

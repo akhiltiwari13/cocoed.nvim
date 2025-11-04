@@ -73,13 +73,14 @@ return {
       completion = {
         -- By default, you may press `<c-space>` to show the documentation.
         -- Optionally, set `auto_show = true` to show the documentation after a delay.
-        documentation = { auto_show = true, auto_show_delay_ms = 50 },
+        documentation = { auto_show = true, auto_show_delay_ms = 5 },
       },
 
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'lazydev', 'buffer' },
+        default = { 'lsp', 'path', 'snippets', 'lazydev', 'buffer', 'pandoc_references' },
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
+          pandoc_references = { module = 'cmp-pandoc-references.blink', score_offset = 100 },
         },
       },
 

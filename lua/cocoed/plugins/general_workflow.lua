@@ -3,7 +3,10 @@ return {
     'jmbuhr/telescope-zotero.nvim',
     dependencies = { { 'kkharji/sqlite.lua' } },
   },
-
+  {
+    'jmbuhr/cmp-pandoc-references',
+    otps = {},
+  },
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
@@ -19,12 +22,12 @@ return {
     --   -- refer to `:h file-pattern` for more examples
     --   'BufReadPre '
     --     .. vim.fn.expand '~'
-    --     .. '/files/notes/*/*.md',
-    --   -- 'BufNewFile ' .. vim.fn.expand '~' .. '/files/notes/*/*.md',
+    --     .. '/Work/notes/*/*.md',
+    --   -- 'BufNewFile ' .. vim.fn.expand '~' .. '/Work/notes/*/*.md',
     --   -- 'BufReadPre '
     --   --   .. vim.fn.expand '~'
-    --   --   .. 'files/notes/*.md',
-    --   -- 'BufNewFile' .. vim.fn.expand '~' .. 'files/notes/*.md',
+    --   --   .. 'Work/notes/*.md',
+    --   -- 'BufNewFile' .. vim.fn.expand '~' .. 'Work/notes/*.md',
     -- },
 
     dependencies = {
@@ -37,7 +40,7 @@ return {
       -- see above for full list of optional dependencies ☝️
     },
     opts = {
-      dir = vim.fn.expand '~' .. '/files/notes', -- specify the vault location. no need to call 'vim.fn.expand' here
+      dir = vim.fn.expand '~' .. '/Work/notes', -- specify the vault location. no need to call 'vim.fn.expand' here
       use_advanced_uri = true,
       finder = 'telescope.nvim',
       log_level = vim.log.levels.DEBUG,
@@ -284,11 +287,4 @@ return {
       vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
     end,
   },
-
-  { 'kkharji/sqlite.lua' },
-  {
-    'jmbuhr/telescope-zotero.nvim',
-    dependencies = { { 'kkharji/sqlite.lua' } },
-  },
-  { 'mrjones2014/smart-splits.nvim', version = '>=1.0.0' },
 }
